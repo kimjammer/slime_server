@@ -354,7 +354,8 @@ class Discord_Components_Funcs(commands.Cog):
 
         if mode in 'buttons':
             select_options = buttons_select_options
-            buttons1, buttons2, = [['Reload Panel', 'controlpanel', '\U0001F504'], buttons_dict[buttons_mode][0]], buttons_dict[buttons_mode][1]
+            buttons1 = [['Reload Panel', 'controlpanel', '\U0001F504']] + buttons_dict[buttons_mode][0]
+            buttons2 = buttons_dict[buttons_mode][1]
             params = ["**Buttons**", 'update_server_panel', 'Choose what buttons to show']
 
         elif mode == 'servers':
@@ -498,4 +499,5 @@ if slime_vars.use_tmux is False:
 
 
 for k, v in buttons_dict.items():
-    buttons_dict[k] = [sublist for sublist in v[0] if sublist[1] not in if_no_tmux + if_using_rcon]
+    #buttons_dict[k] = [sublist for sublist in v[0] if sublist[1] not in if_no_tmux + if_using_rcon] #This line is broken
+    pass

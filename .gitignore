@@ -7,4 +7,7 @@ test.py
 *.pyc
 *.bak
 *.log
+mcservers/*
+pyenvs/*
 source/bot_files/servers.csv
+*.token
